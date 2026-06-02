@@ -9,6 +9,7 @@
 
 # --- but track these (shareable config) ---
 !/.gitignore
+!/README.md
 !/CLAUDE.md
 !/setup.sh
 !/skills/
