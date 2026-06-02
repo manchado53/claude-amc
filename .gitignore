@@ -1,0 +1,29 @@
+# ~/.claude config repo — commit shareable config, ignore secrets + regenerable junk.
+#
+# Strategy: ignore everything by default, then explicitly un-ignore the files
+# we want tracked. This is safer than a denylist — new junk Claude Code drops
+# into ~/.claude won't get committed by accident.
+
+# --- ignore everything by default ---
+/*
+
+# --- but track these (shareable config) ---
+!/.gitignore
+!/CLAUDE.md
+!/setup.sh
+!/skills/
+!/agents/
+!/hooks/
+!/machines/
+!/settings.json
+
+# --- never track: secrets / machine-specific live copy ---
+# (these are re-created per machine or hold credentials)
+.credentials.json
+settings.local.json
+/CLAUDE.machine.md
+
+# --- never track inside tracked dirs: caches/junk that may appear there ---
+**/.DS_Store
+**/__pycache__/
+**/*.pyc
