@@ -3,6 +3,14 @@
 ## Always Plan First
 Before starting any non-trivial implementation task, enter plan mode to design an approach and get user approval before writing code. This applies to new features, refactors, multi-file changes, and anything with multiple valid approaches.
 
+## Branch Per Task — Never Commit to Main
+`main` is sacred. Never commit directly to it. Every new idea, task, experiment, or research thread gets its own branch, created off the latest `main` before any code or files change.
+
+- Branch first, then work. If you find yourself on `main` (or the default branch) with changes to make, stop and create a branch.
+- Name branches descriptively in kebab-case with an intent prefix: `feature/<name>`, `fix/<name>`, `research/<name>`, `experiment/<name>`.
+- Bring work back to `main` only through a reviewed merge or PR, never a direct commit.
+- The only exception is the very first commit that bootstraps a brand-new empty repo (there is no branch to fork from yet).
+
 ## Plan Mode Iteration
 When iterating on a plan, do NOT re-output the full plan after each message. Only show what changed (a diff or the revised step). Re-present the full plan only when explicitly asked.
 
