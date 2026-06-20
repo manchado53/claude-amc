@@ -63,14 +63,20 @@
       "Bash(python --version *)",
       "Bash(pip list *)",
       "Bash(grep *)",
-      "Bash(rg *)"
-    ]
+      "Bash(rg *)",
+      "Read(~/.claude/**)",
+      "Edit(~/.claude/**)"
+    ],
+    "additionalDirectories": []
   },
+  "model": "opus[1m]",
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true
   },
+  "extraKnownMarketplaces": {},
   "alwaysThinkingEnabled": true,
   "autoDreamEnabled": true,
   "skipWorkflowUsageWarning": true,
-  "theme": "light"
+  "theme": "light",
+  "agentPushNotifEnabled": true
 }
