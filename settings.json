@@ -78,5 +78,38 @@
   "autoDreamEnabled": true,
   "skipWorkflowUsageWarning": true,
   "theme": "light",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "tui": "fullscreen",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "asb-session-start"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "asb-session-end"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "asb-pre-compact"
+          }
+        ]
+      }
+    ]
+  }
 }
